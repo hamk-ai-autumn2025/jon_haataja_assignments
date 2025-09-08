@@ -33,9 +33,6 @@ def get_haiku_variations(client, topic):
         {"temperature": 0.6, "top_p": 0.8, "presence_penalty": 0.2, "frequency_penalty": 0.6},
     ]
 
-    #print(f"\nGenerating 3 SEO-optimized haikus about: '{topic}'\n")
-    #print("-" * 50)
-
     for i, params in enumerate(settings, 1):
         try:
             response = client.chat.completions.create(
